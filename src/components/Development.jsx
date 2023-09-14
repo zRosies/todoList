@@ -110,6 +110,13 @@ function Development() {
     })
     return ()=> unsub();
   },[])
+
+  useEffect(() => {
+    if (window.innerWidth < 800) {
+      setIsVisible(false);
+    }
+  }, []);
+    
   
   return (
     <>

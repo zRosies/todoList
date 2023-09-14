@@ -112,6 +112,12 @@ function Work() {
     return ()=> unsub();
   },[])
 
+  useEffect(() => {
+    if (window.innerWidth < 800) {
+      setIsVisible(false);
+    }
+  }, []);
+    
   
   
   return (

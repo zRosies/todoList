@@ -295,9 +295,6 @@ main{
     margin-bottom: 400px;
     
   }
-  .category .list{
-    width: 90%;
-  }
 
   .todo input{
     height: 30px;
@@ -314,6 +311,22 @@ main{
     height: 80%;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
+  }
+  .answ{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+  }
+  .category{
+    width: 100%;
+  }
+  .category input{
+    width: 100%;
+  }
+  .buttons{
+    margin: 0 auto;
+    margin-top: 10px;
+    
   }
 
   
