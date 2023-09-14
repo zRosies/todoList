@@ -1,0 +1,322 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+*{
+  font-family: "Poppins";
+}
+
+body{
+  margin: 0 auto;
+  background: linear-gradient( #0f4aa2 10% ,  #9ec1f6 100%);
+  height: 100%;
+ 
+}
+h2{
+  font-size: 2em;
+  margin: 0px;
+  text-align: center;
+}
+
+
+
+main{
+  margin: 0 auto;
+  display: flex;
+  /* height: 700px; */
+  
+}
+
+#btn{
+  position: relative;
+  display: inline-flex;
+  outline: none;
+  border: none;
+  color: #aa66b8;
+  font-size: 3em;
+  cursor: pointer;
+  margin: 0px;
+  align-content: end;
+  top: 15px;
+  left: 5px;
+  transition: .2s ease-in-out;
+}
+
+#btn:hover{
+  color: #00e25e;
+}
+.todo input{
+  height: 40px;
+  width: 85%;
+}
+
+.todo select{
+  margin-top: 10px;
+  height: 30px;
+  width: 100%;
+}
+
+.menu nav{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.menu nav a{
+  text-decoration: none;
+  color: rgb(227, 227, 227);
+  margin-bottom: 10px;
+  padding: 20px;
+ 
+  background: linear-gradient(to left, #5f8cd4 5%, #000 70%);
+  font-size: 1.2em;
+  font-weight: 800;
+  transition: .3s ease-in-out;
+}
+
+.menu nav a:hover{
+  transform: scale(1.1);
+  
+}
+.todo{
+  position: relative;
+  margin: 0 auto;
+  margin-top: 20px;
+  box-shadow: 2px 2px 10px;
+  border-radius: 20px;
+  width: 500px;
+  height: 100%;
+  padding: 20px;
+  margin-bottom: 300px;
+  background: #fff;
+}
+
+
+.todoDif{
+  position: relative;
+  margin: 0 auto;
+  margin-top: 20px;
+  box-shadow: 2px 2px 10px;
+  border-radius: 20px;
+  width: 500px;
+  height: 100%;
+  padding: 20px;
+  margin-bottom: 430px;
+  background: #fff;
+}
+
+.todo button{
+  background: none;
+}
+
+.answ{
+  
+  background: linear-gradient( to right, #99a5ea 30% ,  #9ec1f6 100%);
+  border-radius: 10px;
+}
+.answers #div{
+  text-align: center;
+}
+
+.answers span{
+  display: block;
+  color: rgb(238, 103, 103);
+  font-size: 3em;
+  margin-top: 20px;
+}
+.answ button{
+  border: none;
+  outline: none;
+}
+
+.load{
+  animation: loading 2s infinite;
+  color: #9ec1f6;
+  margin-right: 20px;
+  
+}
+
+@keyframes loading {
+  0% {
+      transform: rotate(0deg);
+  }
+  20% {
+      transform: rotate(360deg);
+  }
+  40% {
+      transform: rotate(720deg);
+  }
+  60% {
+      transform: rotate(1080deg);
+  }
+  80% {
+      transform: rotate(1440deg);
+  }
+  100% {
+      transform: rotate(1800deg);
+  }
+ 
+}
+
+#edit{
+  color: #ffffff;
+  padding: 10px;
+  background: #520b6c;
+  border-radius: 4px;
+  transition: .3s ease-in-out;
+  cursor: pointer;
+}
+.category{
+  width: 60%;
+  
+}
+
+.category input{
+  font-weight: 500;
+}
+
+
+
+.answ input{
+  width: 100%;
+
+}
+.buttons{
+  display: flex;
+}
+#trash{
+  background: rgb(222, 94, 94);
+  padding: 10px;
+  margin-right: 10px;
+  border-radius:4px;
+  text-align: center;
+  align-self: center;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+}
+
+
+#done{
+  background: rgb(16, 162, 26);
+  padding: 10px;
+  border-radius:4px;
+  margin-right: 3px;
+  text-align: center;
+  align-self: center;
+  color: #fff;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+  
+
+}
+
+#done:hover, #trash:hover, #edit:hover{
+  box-shadow: 0px 2px 5px #000;
+}
+.answ{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin-top: 20px;
+  
+}
+.in{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.fire{
+  color: #f54100;
+}
+
+.case{
+  color: #9a5705;
+}
+
+.book{
+  color: #0867c6;
+}
+.home{
+  color: #fff;
+}
+
+.dice{
+  color: #fff;
+}
+
+.answers{
+  margin-top: 20px;
+  /* border-top: 2px solid black; */
+  
+}
+
+
+.menu nav{
+  width: 100%;
+}
+
+.menu {
+ background: #403f3f;
+ width: 0;
+ overflow: hidden;
+ margin-right: 30px;
+ 
+}
+.menu.active::before {
+  width: 0; /* Initially 0% width */
+  transition: width 5s ease; /* Delay the width animation by 5 seconds */
+}
+
+.menu.active {
+  /* Expand to the right when active */
+  width: 25%; /* Expand to 25% width when active */
+  transition: width 5s ease;
+}
+
+.category input{
+  border: none;
+  outline: none;
+  height: 35px;
+  background: #ffffff;
+  border-radius: 8px;
+
+  
+}
+
+
+.category p{
+  font-size: 0.9em;
+}
+
+
+@media screen and (max-width:800px) {
+  .todo{
+    width: 85%;
+    margin-bottom: 400px;
+    
+  }
+  .category .list{
+    width: 90%;
+  }
+
+  .todo input{
+    height: 30px;
+    width: 80%;
+  }
+  .todo #btn{
+    font-size: 2.5em;
+
+  }
+  .menu.active{
+    position: absolute;
+    z-index: 2;
+    width: 80%;
+    height: 80%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  
+}
+
+

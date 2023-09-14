@@ -1,0 +1,158 @@
+
+
+header{
+    background: #0a0a0a;
+    color: #000;
+    box-shadow: 2px 2px 10px #94b4e2;
+    justify-content: space-evenly;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    
+  }
+  
+  header span{
+    font-size: 1.5em;
+    /* cursor: pointer; */
+    justify-content: center;
+    align-content: center;
+    /* height: 50px;
+    width: 50px; */
+  
+  }
+  #toggle:hover, #home:hover{
+    background: #94b4e2;
+    justify-content: center;
+    
+    
+  }
+  
+  header input{
+    background: #373737;
+    outline: none;
+    border: none;
+    align-self: center;
+    color: #fff;
+    height: 35px;
+    position: relative;
+    margin-left: 10px;
+    border-radius: 5px;
+    
+  }
+  
+  header input::placeholder{
+    color: #fff;
+    padding-left: 5px;
+  }
+  
+  .star{
+    color: rgb(255, 251, 0);
+  }
+  
+  .head{
+    display: flex;
+   align-items: center;
+   justify-content: center;
+  }
+  
+  .scicon{
+    display: inline-flex;
+    font-size: 1.2em;
+    cursor: auto;
+    text-align: center;
+    align-self: center;
+    align-content: center;
+    margin-left: 5px;
+
+    border-radius: 8px;
+    padding: 10px;
+    background: #3d3d3d;
+    cursor: pointer;
+    margin-bottom: 5px;  
+    position: relative;
+    bottom:-3.4px;
+    transition: .3s ease-in-out;
+    color: #fff;
+    outline: none;
+    border: none;
+  }
+  
+  .scicon:hover{
+    background: #94b4e2;
+  }
+  
+  
+  
+  
+  #toggles  {
+    
+  
+    
+   
+  }
+
+  .new{
+    display: flex;
+    height: 100%;
+
+  }
+
+  .new a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  #home{
+    font-size: 1.8em;
+  }
+
+  #home, #toggle {
+    color: #fff;
+
+    margin-right: 5px;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+    height: 100%;
+   
+    
+    
+  }
+
+
+.starDiv{
+  margin-right: 20px;
+
+}
+
+
+#div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#div span{
+  color:rgb(209, 68, 68);
+  font-size: 3em;
+}
+
+
+@media screen and (max-width:800px) {
+  header input{
+    width: 60%;
+  }
+
+  .starDiv{
+    font-size: .8em;
+    display: flex;
+  }
+  
+}
