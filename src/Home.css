@@ -197,6 +197,7 @@ main{
 
 .thrash, .edit, .buttonComplete{
   background: transparent;
+  font-size: 1.2em;
 }
 
 
@@ -285,6 +286,11 @@ main{
   border-radius: 8px;
 
   
+}
+
+.category .list{
+  margin-top: 10px;
+  width: 100%;
 }
 
 
