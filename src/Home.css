@@ -199,7 +199,9 @@ main{
   background: transparent;
   font-size: 1.2em;
 }
-
+#thrash, #done, #edit{
+  font-size: .9em;
+}
 
 #done{
   background: rgb(16, 162, 26);

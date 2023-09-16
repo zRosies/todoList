@@ -9,19 +9,23 @@ import { dataBase } from "./firebase";
 const Search = ({ search }) => {
     // const [search, setSearch] = useState("");
     const [filteredTasks, setFilteredTasks] = useState([]);
-    const [todoType, setTodo] = useState("");
-    const [selectType, setTodoType] = useState("");
-    const [isVisible, setIsVisible] = useState(true);
+    // const [todoType, setTodo] = useState("");
+    // const [selectType, setTodoType] = useState("");
+    // const [isVisible, setIsVisible] = useState(true);
     const [todos, setTodos] = useState([]);
-    const [completedTask, setCompletedTask] = useState([]);
+    // const [completedTask, setCompletedTask] = useState([]);
     const [isloading,setIsLoading]= useState(true)
   
     const filterTasks = (query) => {
       if (!query) return todos;
+      console.log(query)
+      
       return todos.filter(
         (task) =>
-          task.todoType.toLowerCase().includes(query.toLowerCase()) ||
-          task.categoryType.toLowerCase().includes(query.toLowerCase())
+          task.todoType.toLowerCase() == query.toLowerCase() ||
+          task.categoryType.toLowerCase() == query.toLowerCase() ||
+          task.todoType.toLowerCase().slice(0,3) == query.toLowerCase().slice(0,3)
+          
       );
     };
   
@@ -58,16 +62,17 @@ const Search = ({ search }) => {
       const unsub = onSnapshot(q, (querySnapshot) => {
         let todosArray = [];
         let completedArray = [];
-        
+        search= search.toLowerCase()
   
         querySnapshot.forEach((doc) => {
           const todoData = { ...doc.data(), id: doc.id };
-          if (search === todoData.todoType || search === todoData.categoryType) {
-            todosArray.push(todoData);
+          todosArray.push(todoData);
+          
+            
             if (todoData.completed) {
               completedArray.push(todoData.id);
             }
-          }
+          
         });
   
         setTodos(todosArray);
@@ -79,6 +84,7 @@ const Search = ({ search }) => {
     useEffect(() => {
         const filtered = filterTasks(search);
         setFilteredTasks(filtered);
+        console.log(filtered)
       }, [search, todos]);
   
     return (
@@ -92,7 +98,7 @@ const Search = ({ search }) => {
               ) : filteredTasks.length === 0 ? (
                 <div className="task-list">
                   <div id="div">
-                    <p>Task not found</p>
+                    <p>No task found</p>
                     <span>
                       <BsFillCalendarXFill />
                     </span>
